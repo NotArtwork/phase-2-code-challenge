@@ -1,10 +1,17 @@
 import React from "react";
 import { getRandomPlaneteer } from "../data/planeteers";
+import Planeteer from "./Planeteer";
 
-function RandomButton() {
+function RandomButton({ planeteers, setPlaneteers}) {
   function handleClick() {
     const randomPlaneteer = getRandomPlaneteer();
-    console.log("For the advanced deliverables", randomPlaneteer);
+    setPlaneteers([...planeteers, randomPlaneteer])
+
+    // const postPlaneteers = () => {
+    //   fetch('http://localhost:8003/planeteers',
+    //   {method: 'POST',
+    // 'application/})
+    // }
   }
 
   return (
